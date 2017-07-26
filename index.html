@@ -1,0 +1,165 @@
+  <!-- 
+   DESIGN STRONGLY INSPIRED FROM HASSAN RAHIM WEBSITE 
+   FOR FUN AN EXERCISE PURPOSE ONLY :)
+  -->
+<!doctype html>
+<html class="no-js" lang="fr_FR">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta property="og:title" content="Tristan Bagot">
+      <meta property="og:image" content="img/og_image.jpg">
+      <meta property="og:description" content="">
+      <meta property="og:site_name" content="Tristan Bagot"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <div id="wrapper">
+         <div id="intro" class="text-center">
+            <div class="inner">
+               <h1>Tristan Bagot</h1>
+            </div>
+         </div>
+         <div class="box-row contained text-center no-margin-top">
+            <h2>Wagon Programmer</h2>
+         </div>
+         <div class="box-row contained text-center">
+            <div id="image small">
+               <div class="invert scary">
+                  <img src="img/ban.jpg" alt="Tristan Bagot" width="100%">
+               </div>
+            </div>
+         </div>
+         <div class="box-row contained text-center">
+            <h2>Expert at installing Gems</h2>
+         </div>
+         <div class="box-row contained text-center">
+            <h3>Freelance • Based in Paris • France</h3>
+         </div>
+         <div class="box-row text-center contained">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis omnis saepe sit eveniet fugit praesentium ipsum architecto totam autem voluptatum ea sunt a quibusdam cupiditate culpa nam earum, corporis placeat.</p>
+         </div>
+         <div class="box-row">
+            <div class="socials">
+               <ul class="inline-flex">
+                  <li><a href="http://instagram.com/tristan.jpeg">Instagram</a></li>
+                  <li><a href="mailto:tristan.bagot@gmail.com">Contact</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="box-row contained text-center">
+            <div class="image medium">
+               <img src="img/gem.png" alt="Gem" width="100%">
+            </div>
+         </div>
+         <div class="box-row contained text-center">
+            <p>I can <strong>install</strong> any type of Gem for you. <br>If you need to create a <strong>file</strong> or a <strong>folder</strong>, I can also do this for you. My technical skills in the <strong>terminal</strong> are endless.</p>
+            <p>Just give me a <strong>call</strong> at 06.67.33.45.90</p>
+         </div>
+         <div class="box-row contained text-center mt15">
+            <h3>Please meet my friends and collaborators</h3>
+         </div>
+         <div id="content" class="box-row text-center contained">
+            <div class="content-item">
+               <div class="item-title">
+                  Tupac Shakur
+               </div>
+               <div class="item-image">
+                  <div class="invert scary">
+                     <img src="img/tupac_shakur.jpg" width="100%">
+                  </div>
+               </div>
+            </div>
+            <div class="content-item">
+               <div class="item-title">
+                  Chuck Norris
+               </div>
+               <div class="item-image">
+                  <div class="invert scary">
+                     <img src="img/chuck.jpg" width="100%">
+                  </div>
+               </div>
+            </div>
+            <div class="content-item">
+               <div class="item-title">
+                  Edouard Foussier
+               </div>
+               <div class="item-image">
+                  <div class="invert scary">
+                     <img src="img/edouard.jpg" width="100%">
+                  </div>
+               </div>
+            </div>
+            <div class="content-item">
+               <div class="item-title">
+                  Yukihiro Matsumoto
+               </div>
+               <div class="item-image">
+                  <div class="invert scary">
+                     <img src="img/matz.jpg" width="100%">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer>
+            <div class="flex-2">
+               <h3>About</h3>
+               <p>I learned the hard way by Raking my Rake. Made weekly<br>and effective sport in the Wagon cave.
+               <br><br><small>© All rights reserved</small></p>
+            </div>
+            <div class="flex-1">
+               <h3>Opening hours</h3>
+               <p>
+                  Every day
+                  <br>from 9am to 7pm
+               </p>
+            </div>
+            <div class="flex-1">
+               <h3>Address</h3>
+               <p>
+                  16 Villa Gaudelet
+                  <br>75011 Paris
+                  <br>
+                  <br>Table &dagger;&dagger;
+               </p>
+            </div>
+         </footer>
+      </div>
+      <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
+      <script>
+         $(document).ready(function() {
+          var menu = $('.socials');
+          var stick = false;
+          menu.after(menu.clone().addClass('clone sticky fixed hide'));
+          var stickyNav = function() {
+              var stickyNavTop = menu.offset().top;
+              var scrollTop = $(window).scrollTop();
+              if (scrollTop > stickyNavTop) {
+                  if (!stick) {
+                      menu.css('opacity', 0);
+                      $('.socials.clone').removeClass('hide');
+                      stick = true;
+                  }
+              } else {
+                  menu.css('opacity', 1);
+                  $('.socials.clone').addClass('hide');
+                  stick = false;
+              }
+          };
+          stickyNav();
+          $(window).scroll(function() {
+              stickyNav();
+          });
+          $(window).resize(function() {
+              stickyNav();
+          });
+      });
+      </script>
+   </body>
+</html>
